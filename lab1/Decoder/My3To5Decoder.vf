@@ -1,0 +1,97 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : My3To5Decoder.vf
+// /___/   /\     Timestamp : 02/26/2024 17:23:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3a -verilog C:/Decoder/My3To5Decoder.vf -w C:/Decoder/My3To5Decoder.sch
+//Design Name: My3To5Decoder
+//Device: spartan3a
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module My3To5Decoder(IN_0, 
+                     IN_1, 
+                     IN_2, 
+                     XLXN_65, 
+                     OUT_0, 
+                     OUT_1, 
+                     OUT_2, 
+                     OUT_3, 
+                     OUT_4, 
+                     XLXN_67);
+
+    input IN_0;
+    input IN_1;
+    input IN_2;
+    input XLXN_65;
+   output OUT_0;
+   output OUT_1;
+   output OUT_2;
+   output OUT_3;
+   output OUT_4;
+   output XLXN_67;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_55;
+   wire XLXN_57;
+   wire XLXN_58;
+   
+   AND3B2  XLXI_2 (.I0(IN_1), 
+                  .I1(IN_0), 
+                  .I2(IN_2), 
+                  .O(XLXN_3));
+   AND3B2  XLXI_3 (.I0(IN_0), 
+                  .I1(IN_2), 
+                  .I2(IN_1), 
+                  .O(XLXN_2));
+   OR2  XLXI_4 (.I0(XLXN_3), 
+               .I1(XLXN_2), 
+               .O(OUT_1));
+   AND3B2  XLXI_5 (.I0(IN_0), 
+                  .I1(IN_2), 
+                  .I2(IN_1), 
+                  .O(OUT_2));
+   AND2B2  XLXI_6 (.I0(IN_0), 
+                  .I1(IN_2), 
+                  .O(XLXN_55));
+   AND2B1  XLXI_7 (.I0(IN_2), 
+                  .I1(IN_1), 
+                  .O(XLXN_54));
+   AND2B1  XLXI_8 (.I0(IN_1), 
+                  .I1(IN_2), 
+                  .O(XLXN_53));
+   OR3  XLXI_9 (.I0(XLXN_53), 
+               .I1(XLXN_54), 
+               .I2(XLXN_55), 
+               .O(OUT_3));
+   AND3B3  XLXI_28 (.I0(IN_0), 
+                   .I1(IN_2), 
+                   .I2(IN_1), 
+                   .O(XLXN_58));
+   OR2  XLXI_30 (.I0(XLXN_57), 
+                .I1(XLXN_58), 
+                .O(OUT_4));
+   AND3B1  XLXI_31 (.I0(IN_0), 
+                   .I1(IN_2), 
+                   .I2(IN_1), 
+                   .O(XLXN_57));
+   INV  XLXI_32 (.I(IN_1), 
+                .O(OUT_0));
+   OR2  XLXI_40 (.I0(XLXN_65), 
+                .I1(XLXN_65), 
+                .O(XLXN_67));
+endmodule

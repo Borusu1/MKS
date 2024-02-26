@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Decoder/My3To5Decoder_isim_beh.exe" -prj "C:/Decoder/My3To5Decoder_beh.prj" "My3To5Decoder" "work.glbl" 

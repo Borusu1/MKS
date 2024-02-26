@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Decoder/My3To5Decoder.xst" -ofn "C:/Decoder/My3To5Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 My3To5Decoder.ngc My3To5Decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o My3To5Decoder_map.ncd My3To5Decoder.ngd My3To5Decoder.pcf 
+par -w -intstyle ise -ol high -t 1 My3To5Decoder_map.ncd My3To5Decoder.ncd My3To5Decoder.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml My3To5Decoder.twx My3To5Decoder.ncd -o My3To5Decoder.twr My3To5Decoder.pcf 
+bitgen -intstyle ise -f My3To5Decoder.ut My3To5Decoder.ncd 
+xst -intstyle ise -ifn "C:/Decoder/My3To5Decoder.xst" -ofn "C:/Decoder/My3To5Decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 My3To5Decoder.ngc My3To5Decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o My3To5Decoder_map.ncd My3To5Decoder.ngd My3To5Decoder.pcf 
+par -w -intstyle ise -ol high -t 1 My3To5Decoder_map.ncd My3To5Decoder.ncd My3To5Decoder.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml My3To5Decoder.twx My3To5Decoder.ncd -o My3To5Decoder.twr My3To5Decoder.pcf 
