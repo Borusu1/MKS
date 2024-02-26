@@ -1,0 +1,29 @@
+Command line:
+   My3To5Decoder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49181
+
+Mon Feb 26 17:23:12 2024
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 358.47 Meg
+
+ Total Signals          : 88
+ Total Nets             : 44
+ Total Signal Drivers   : 32
+ Total Blocks           : 15
+ Total Primitive Blocks : 14
+ Total Processes        : 33
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 124
+Total Line Count : 14
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 515.764 Meg
+
+Mon Feb 26 17:25:04 2024
+
